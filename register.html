@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Register Form</title>
+    <link rel="stylesheet" type="text/css" href="register.css">
+       <link rel="stylesheet" type="text/css" href="./dashnav.css">
+
+</head>
+<body>
+        <header class="header">
+
+        <nav class="navbar">
+
+            <span href="#" class="nav-logo">Elitetraders.US</span>
+            <div class="menu">
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="crypto.html" class="nav-link" id="active">                    <i class="fa fa-home" style="font-size:24px" id="active"></i>Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="plan.html" class="nav-link">
+                        <i class="fa fa-credit-card"></i>
+                        Testimonials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="aboutus" class="nav-link">
+                        <i class="fa fa-info-circle"></i>
+                        About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a href="3" class="nav-link">
+                        <i class="fas fa-blog"></i>
+                        Blog</a>
+                </li>
+    
+                <li class="nav-item">
+                    <a href="./faqs.html" class="nav-link">
+                        <i class="fa fa-question"></i>
+                        FAQs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#1" class="nav-link">
+                        <i class="fa fa-phone"></i>
+                        Contact Us</a>
+                </li>
+                <div class="controls">
+                    <a href="./register.html">
+                        <button id="sign_in" class="sign_in">Sign Up</button>
+                    </a>
+                    <button class="open-button" onclick="openForm()">Log in</button>
+                    </div>
+            </ul>
+            </div>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+
+            </div>
+        </nav>
+</header>
+<div class="content">
+    <h2>Register</h2>
+    <form action="/submit_registration" method="post">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br><br>
+        
+        <label for="email">Email:</label><br>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="password">Password:</label><br>
+        <input type="password" id="password" name="password" required><br><br>
+        
+        <input type="submit" value="Register">
+    </form>
+  
+    <div id="demo">
+        By creating an account, you agree to the 
+        <a href="#">Terms of Service</a>. 
+        For more information about EliteFxtraders.US's privacy practices, see the 
+        <a href="#">EliteFxtraders.US Privacy Statement</a>. 
+        We'll occasionally send you account-related emails.
+    </div>
+</div>
+</body>
+<script src="steve_invest.js" type="text/javascript" charset="utf-8"></script>
+</html>
