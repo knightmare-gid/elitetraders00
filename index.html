@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
     <link rel="stylesheet" href="./crypto.css">
@@ -12,8 +13,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home | Elitetraders.US</title>
+    <style>
+            .ticker-container {
+      display: flex;
+      justify-content: center;
+      padding: 20px;
+      background-color: #f5f5f5;
+    }
+ 
+    </style>
 </head>
 <body>
+    
     <header class="header">
         <nav class="navbar">
             <span href="#" class="nav-logo">Elitetraders.US</span>
@@ -74,11 +85,12 @@
 </div>
 
 
+
 <article class="art1">
 <h1>
         Buy & Sell Digital Assets <br> With <span id="root" class="logo_a">Elitetraders.US</span>
         <div class="h_para">
-            At <span id="root">Elitetraders</span>, we provide you with cutting-edge tools, insights, and resources to navigate the dynamic world of cryptocurrency.
+            At <span id="root">Elitetraders</span>, we provide you with cutting-edge tools, insights, and resources to navigate the dynamic world of stock marketing, etfs and cryptocurrency.
             <br> Whether you’re a beginner or an experienced trader, our platform is designed to 
             help you make informed decisions and maximize your investment potential.
         </div>
@@ -86,7 +98,10 @@
         <button class="get_start">Get Started</button>
     </a>
    </h1>
+    <img src="./ppl.jpg" alt="" class="para_pic"/>
+    
     </article>
+    
     <article class="art2">
  
         <span class="features">
@@ -195,6 +210,38 @@
         </div>
         </span>
     </article>
+          <div class="ticker-container">
+
+    <!-- TradingView Widget BEGIN -->
+
+    <div class="tradingview-widget-container">
+      <div class="tradingview-widget-container__widget"></div>
+      <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+      {
+        "symbols": [
+          {
+            "proName": "BITSTAMP:BTCUSD",
+            "title": "Bitcoin"
+          },
+          {
+            "proName": "BITSTAMP:ETHUSD",
+            "title": "Ethereum"
+          },
+          {
+            "proName": "COINBASE:LTCEUR",
+            "title": "Litecoin"
+          }
+        ],
+        "colorTheme": "light",
+        "isTransparent": false,
+        "displayMode": "adaptive",
+        "locale": "en"
+      }
+      </script>
+    </div>
+    <!-- TradingView Widget END -->
+  </div>
+
     
     <article class="art3">
         <h1>Why Invest With Us?</h1> 
@@ -269,7 +316,52 @@
         <button>Sign Up</button>
         </a>
     </section>
-    
+        <article class="art5">
+        <div class="section">
+        <h2 class= "h3">Crypto Currency</h2>
+        <ul>
+            <li>Your crypto assets investment with us allows you to profit from our platform, arbitrage, and exchange trading.</li>
+            <li>This portfolio allows investors to enjoy the double benefit of cryptoassets and other hedge funds.</li>
+        </ul>
+        <button class="cta-button">Crypto Overview</button>
+        <img src="crypto-icon.png" alt="Crypto Icon" class="crypto-icon">
+    </div>
+    <div class="section">
+        <h3 class="h3">Fast Order Execution</h3>
+        <ul>
+            <li>Trade major, minor, and exotic currency pairs.</li>
+            <li>Indices: Trade 15 of the most famous global indices as CFDs.</li>
+        </ul>
+    </div>
+</article>
+<!-- TradingView Widget BEGIN -->
+<div class="tradingview-widget-container">
+  <div id="tradingview_12345"></div>
+  <div class="tradingview-widget-copyright">
+    <!--a href="https://www.tradingview.com/" rel="noopener" target="_blank">
+      <span class="blue-text">Crypto Ticker by TradingView</span>
+    </a-->
+  </div>
+  <script type="text/javascript" src="https://s3.tradingview.com/tv.js"></script>
+  <script type="text/javascript">
+    new TradingView.widget({
+      "width": 980,
+      "height": 610,
+      "symbol": "COINBASE:BTCUSD",
+      "interval": "D",
+      "timezone": "Etc/UTC",
+      "theme": "light",
+      "style": "1",
+      "locale": "en",
+      "toolbar_bg": "#f315a6",
+      "enable_publishing": false,
+      "allow_symbol_change": true,
+      "container_id": "tradingview_12345"
+    });
+  </script>
+</div>
+<!-- TradingView Widget END -->
+
     <footer>
         <div class="company" id="f">
         <b>Company</b><br>
@@ -294,6 +386,7 @@
             <p>&copy; 2024 EliteTraders. All rights reserved.</p>
  
     </footer>
+
 </body>
 <script src="steve_invest.js"></script>
 <script src="scroll .js" type="text/javascript" charset="utf-8"></script>
