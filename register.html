@@ -1,87 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Register Form</title>
-    <link rel="stylesheet" type="text/css" href="register.css">
-       <link rel="stylesheet" type="text/css" href="./dashnav.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration Form</title>
+    <style>
+        body {
+            background-color: #031531;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
 
+        .container {
+            background-color: #06254d;
+            border-radius: 8px;
+            padding: 20px;
+            max-width: 400px;
+            width: 100%;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            margin-top: 130%;
+        }
+
+        .logo {
+            width: 100px;
+            margin: 0 auto;
+        }
+
+        h2 {
+            margin: 10px 0;
+            font-size: 1.5rem;
+            color: #f0f8ff;
+        }
+
+        p {
+            margin: 5px 0;
+            color: #b0c4de;
+        }
+
+        label {
+            display: block;
+            text-align: left;
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"],
+        input[type="number"],
+        select {
+            width: 90%;
+            height: 50px;
+            padding: 7px;
+            margin-bottom: 20px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0b3a69;
+            color: #ffffff;
+        }
+        select[id="country"]{
+            height: 50px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            background-color: #0d4b8d;
+            color: #ffffff;
+            font-size: 16px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0a3e79;
+        }
+
+        .footer {
+            text-align: center;
+            font-size: 0.8rem;
+            color: #ffffff;
+            margin-top: 20px;
+        }
+
+        .footer a {
+            color: #4A90E2;
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-        <header class="header">
+    <div class="container">
+        <img src="logo.png" alt="Logo" class="logo" loading= "lazy">
+        <h2>Welcome To EliteTraders.Us</h2>
+        <p>Please sign up to continue</p>
+        <p>Join more than 7,500 Investors!</p>
+        <form action="/submit_registration" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" id="firstName" name="firstName" required>
 
-        <nav class="navbar">
+            <label for="lastName">Last Name:</label>
+            <input type="text" id="lastName" name="lastName" required>
 
-            <span href="#" class="nav-logo">Elitetraders.US</span>
-            <div class="menu">
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="crypto.html" class="nav-link" id="active">                    <i class="fa fa-home" style="font-size:24px" id="active"></i>Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="plan.html" class="nav-link">
-                        <i class="fa fa-credit-card"></i>
-                        Testimonials</a>
-                </li>
-                <li class="nav-item">
-                    <a href="aboutus" class="nav-link">
-                        <i class="fa fa-info-circle"></i>
-                        About Us</a>
-                </li>
-                <li class="nav-item">
-                    <a href="3" class="nav-link">
-                        <i class="fas fa-blog"></i>
-                        Blog</a>
-                </li>
-    
-                <li class="nav-item">
-                    <a href="./faqs.html" class="nav-link">
-                        <i class="fa fa-question"></i>
-                        FAQs</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#1" class="nav-link">
-                        <i class="fa fa-phone"></i>
-                        Contact Us</a>
-                </li>
-                <div class="controls">
-                    <a href="./register.html">
-                        <button id="sign_in" class="sign_in">Sign Up</button>
-                    </a>
-                    <button class="open-button" onclick="openForm()">Log in</button>
-                    </div>
-            </ul>
-            </div>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
+            <label for="email">Email Address:</label>
+            <input type="email" id="email" name="email" required>
 
-            </div>
-        </nav>
-</header>
-<div class="content">
-    <h2>Register</h2>
-    <form action="/submit_registration" method="post">
-        <label for="username">Username:</label><br>
-        <input type="text" id="username" name="username" required><br><br>
-        
-        <label for="email">Email:</label><br>
-        <input type="email" id="email" name="email" required><br><br>
-        
-        <label for="password">Password:</label><br>
-        <input type="password" id="password" name="password" required><br><br>
-        
-        <input type="submit" value="Register">
-    </form>
-  
-    <div id="demo">
-        By creating an account, you agree to the 
-        <a href="#">Terms of Service</a>. 
-        For more information about EliteFxtraders.US's privacy practices, see the 
-        <a href="#">EliteFxtraders.US Privacy Statement</a>. 
-        We'll occasionally send you account-related emails.
+            <label for="country">Select Country:</label>
+            <select id="country" name="country" required>
+                <option value="" disabled selected>Select Country</option>
+                <!-- Add country options here -->
+            </select>
+
+            <label for="address">Address:</label>
+            <input type="text" id="address" name="address" required>
+
+            <label for="phone">Phone:</label>
+            <input type="number" id="phone" name="phone" required>
+
+            <label for="gender">Select Gender:</label>
+            <select id="gender" name="gender" required>
+                <option value="" disabled selected>Select Gender</option>
+                <option value="male">Male</option>
+                <option value="female">Female</option>
+                <option value="other">Other</option>
+            </select>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <label for="repeatPassword">Repeat Password:</label>
+            <input type="password" id="repeatPassword" name="repeatPassword" required>
+
+            <input type="submit" value="Register">
+        </form>
+
+        <div class="footer">
+            By creating an account, you agree to the <a href="faqs.html">Terms of Service</a>. For more information about EliteFxtraders.US's privacy practices, see the <a href="./privstat.html">EliteFxtraders.US Privacy Statement</a>. We'll occasionally send you account-related emails.
+        </div>
     </div>
-</div>
 </body>
-<script src="steve_invest.js" type="text/javascript" charset="utf-8"></script>
 </html>
