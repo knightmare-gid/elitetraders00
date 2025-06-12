@@ -6,6 +6,7 @@
 }
 body{
     background-color: #f6f6f6;
+    ;
 }
 .art5{
     font-family: Arial, sans-serif;
@@ -57,6 +58,9 @@ body{
             cursor: pointer;
             text-align: center;
             width: 100%;
+                @media (min-width: 1024px) {
+                    width: 10%;
+                }
         }
 
         .crypto-icon {
@@ -128,7 +132,7 @@ html, body {
     margin-top: 1.25rem;
     position: relative;
     
-    left: 10%;
+    left: 3%;
 }
 
 .tiles1 {
@@ -184,7 +188,7 @@ html, body {
     flex-direction: column;
     line-height: 1.375;
     margin-left: 0.5rem;
-}
+}k9
 
 .tile-header h3 span:last-child {
     font-size: 0.825em;
@@ -237,22 +241,24 @@ a {
 }
 .art1 img {
     position: relative;
-    z-index: 5;
-    opacity: 0;
-    width: 100%;
-    height: 154vh;
+    z-index: 1;
+    opacity: 1;
+    width: 10%;
+    height: vh;
+    top: 50px;
     bottom: 70%;
     animation-name: fadein;
     animation-duration: 16s;
     animation-iteration-count: 1;
     animation-direction: ;
-}
+}/*
 @keyframes fadein{
     0%{opacity: 0;}
     25%{opacity: 0.25;}
     60%{opacity: 0.1;}
     100%{opacity: 0.02;}
-}
+}*/
+
 h1 {
     font: 2.2rem sans-serif;
     padding: 12rem 0 0 2rem;
@@ -307,7 +313,7 @@ h1 {
     cursor: pointer;
     top: 30px;
     left: 0%;
-    z-index: 9;
+    z-index: 0;
 }
 
 @media (max-width: 768px) {
@@ -330,9 +336,13 @@ h1 {
 
 .art2 {
     background-color: #172132;
-    height: 60rem;
+    height: 100%;
     overflow: hidden;
+        @media (min-width: 1024px) {
+            height: 100%;
+        }
 }
+
 
 @media (max-width: 768px) {
     .art2 {
@@ -373,9 +383,22 @@ h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 200;
     text-align: center;
+        @media (min-width: 1024px) {
+             font-size: 12rem;
+        }
 }
 .art3 p{
     color: #f9f9f9;
+    position: relative;
+    font-size: 2rem;  
+    top: 0;
+    margin-bottom: 50%;
+    text-align: center;
+}
+.art3 h2{
+    color: #ff9333;
+    font-size: 2.5rem;
+    margin: 0;
 }
 @media (max-width: 768px) {
     .art3 h1 {
@@ -389,11 +412,7 @@ h1 {
       text-align: center;
       color: var(--prom-color);
     }
-    .art3 h2{
-        color: #ff9333;
-        font-size: 2.5rem;
-        margin: 0;
-    }
+ 
 }
 
 .art4 {
@@ -416,6 +435,9 @@ h1 {
     font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     font-weight: 600;
     text-align: center;
+    @media (min-width: 1024px) {
+        font-size: 12rem;
+   }
 }
 
 @media (max-width: 768px) {
@@ -508,3 +530,17 @@ footer a {
     width: 50px;
     height: 50px;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**/ 	
